@@ -45,6 +45,22 @@
             font-weight: 700;
             font-size: 16px;
             letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            background: #6366f1;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
         }
 
         .nav-buttons {
@@ -263,7 +279,7 @@
         }
 
         .contact-item:hover {
-            color: #ff6b6b;
+            color: #6366f1;
         }
 
         .bima-bharosa {
@@ -291,15 +307,18 @@
         }
 
         .partners-title {
-            font-size: 28px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1d29;
+            margin-bottom: 12px;
+            letter-spacing: -0.6px;
         }
 
         .partners-subtitle {
-            color: #666;
-            margin-bottom: 40px;
+            color: #6b7280;
+            margin-bottom: 48px;
+            font-size: 18px;
+            font-weight: 400;
         }
 
         .partners-grid {
@@ -312,18 +331,122 @@
 
         .partner-card {
             background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px 16px;
             text-align: center;
             font-size: 14px;
-            color: #666;
+            font-weight: 500;
+            color: #6b7280;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
         }
 
         .partner-card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+            transform: translateY(-4px);
+            border-color: #6366f1;
+            color: #6366f1;
+        }
+
+        .partner-logo {
+            width: 48px;
+            height: 48px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 64px 0 48px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .footer-partners {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 64px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .footer-partner {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+            min-width: 140px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-partner:hover {
+            background: white;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
             transform: translateY(-2px);
+        }
+
+        /* Image placeholder styles */
+        .image-placeholder {
+            background: linear-gradient(45deg, #f3f4f6 25%, transparent 25%), 
+                        linear-gradient(-45deg, #f3f4f6 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #f3f4f6 75%), 
+                        linear-gradient(-45deg, transparent 75%, #f3f4f6 75%);
+            background-size: 8px 8px;
+            background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+            border: 2px dashed #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .footer-company {
+            margin-bottom: 24px;
+        }
+
+        .footer-company-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1d29;
+            margin-bottom: 8px;
+            letter-spacing: -0.4px;
+        }
+
+        .footer-company-subtitle {
+            color: #6b7280;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .footer-copyright {
+            color: #9ca3af;
+            font-size: 14px;
+            font-weight: 400;
         }
 
         /* Icons */
@@ -352,8 +475,13 @@
                 gap: 15px;
             }
             
+            .footer-partners {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
             .partners-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -362,7 +490,11 @@
     <!-- Header -->
     <div class="header">
         <nav class="nav">
-            <div class="logo">Jupiter</div>
+            <div class="logo">
+                <div class="logo-icon">J</div>
+                <!-- Replace with: <img src="/images/jupiter-logo.png" alt="Jupiter" style="height: 24px;"> -->
+                Jupiter
+            </div>
             <div class="nav-buttons">
                 <a href="#" class="nav-button active">
                     <span class="icon-location"></span>
@@ -465,14 +597,52 @@
             <p class="partners-subtitle">Working with India's leading insurance providers</p>
 
             <div class="partners-grid">
-                <div class="partner-card">HDFC Life</div>
-                <div class="partner-card">ICICI Lombard</div>
-                <div class="partner-card">Bajaj Allianz</div>
-                <div class="partner-card">SBI Life</div>
-                <div class="partner-card">Max Life</div>
-                <div class="partner-card">Star Health</div>
+                <div class="partner-card">
+                    <div class="partner-logo">🏦</div>
+                    <!-- Replace with: <img src="/images/partners/hdfc-life.png" alt="HDFC Life" class="partner-logo"> -->
+                    HDFC Life
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">🏢</div>
+                    <!-- Replace with: <img src="/images/partners/icici-lombard.png" alt="ICICI Lombard" class="partner-logo"> -->
+                    ICICI Lombard
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">🏛️</div>
+                    <!-- Replace with: <img src="/images/partners/bajaj-allianz.png" alt="Bajaj Allianz" class="partner-logo"> -->
+                    Bajaj Allianz
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">🏦</div>
+                    <!-- Replace with: <img src="/images/partners/sbi-life.png" alt="SBI Life" class="partner-logo"> -->
+                    SBI Life
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">💼</div>
+                    <!-- Replace with: <img src="/images/partners/max-life.png" alt="Max Life" class="partner-logo"> -->
+                    Max Life
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">⭐</div>
+                    <!-- Replace with: <img src="/images/partners/star-health.png" alt="Star Health" class="partner-logo"> -->
+                    Star Health
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-company">
+                <div class="footer-company-name">AMICA INSURANCE BROKERS PVT. LTD.</div>
+                <div class="footer-company-subtitle">Registered Insurance Broker</div>
+            </div>
+
+            <div class="footer-copyright">
+                © 2025 AMICA INSURANCE BROKERS PVT. LTD.. All rights reserved.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
